@@ -1,0 +1,135 @@
+$theme-bg-color:#eee;
+$theme-color:gray;
+$normal-padding:7px;
+$border-width:1px;
+$border-radius:2px;
+$link-visited:#c0c0c0;
+$link-hover:#c0c0c0;
+
+body {
+    background-color: $theme-bg-color;
+    padding:0px;
+    margin:0px;
+}
+
+.container {
+    background-color: white;
+    padding:10px;
+    margin: 10px;
+}
+
+input {
+    outline:none;
+}
+
+a {
+    color: inherit;
+    cursor:pointer;
+}
+
+a:hover { color:$link-hover; }
+a:visited { color:$link-visited; }
+
+.nav {
+    list-style:none;
+    padding:0px;
+
+    li {
+        border:solid;
+        border-width:$border-width;
+        border-radius:$border-radius;
+        margin: 1px;
+        text-align:center;
+        padding:$normal-padding;
+        float:left;
+    }
+
+    li:hover {
+        color:#C0C0C0; 
+    }
+}
+
+.search-form {
+    input[type="text"] {
+        background-color:white;
+        border:solid;
+        border-width:$border-width;
+        border-radius:$border-radius;
+        padding:$normal-padding;
+        width:20%;
+    }
+}
+
+.btn {
+    border: solid;
+    background-color:#eee;
+    border-width: $border-width;
+    border-radius:$border-radius;
+    text-align:center;
+    padding:$normal-padding;
+    cursor:pointer;
+    width: 100px;
+}
+
+.btn:hover {
+    background-color:#f2f2f2;
+}
+
+.textline {
+    background-color:white;
+    border:solid;
+    border-width:$border-width;
+    border-radius:$border-radius;
+    padding:$normal-padding;
+    width:200px;
+}
+
+.error {
+    border-color:red;
+    color: red;
+}
+
+.success {
+    border-color:green;
+    color: green;
+}
+
+.info {
+    border-color:#66C9D9;
+    color: #66C9D9;
+}
+
+@mixin message($color, $bg-color){
+    color:$color;
+    border: solid;
+    border-width:$border-width;
+    border-radius:$border-radius;
+    background-color:$bg-color;
+    text-align:center;
+    padding:$normal-padding;
+    position: fixed;
+    top:0px;
+    left:40%;
+    right:40%;
+    width:20%;
+}
+
+.alert {
+    @include message(red, #F5B3B3);
+}
+
+.notice {
+    @include message(blue, #66C9D9)
+}
+
+.sticky-footer {
+    display:block;
+    border:solid;
+    border-width:$border-width;
+    background-color:white;
+    text-align:center;
+    padding:$normal-padding;
+    position:fixed;
+    bottom:0px;
+    width: 100%;
+}
