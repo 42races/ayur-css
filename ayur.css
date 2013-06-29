@@ -9,7 +9,7 @@ body {
   margin: 10px; }
 
 input {
-  outline: none; }
+  outline: none !important; }
 
 a {
   color: inherit;
@@ -73,8 +73,8 @@ a:visited {
   color: green; }
 
 .info {
-  border-color: #66C9D9;
-  color: #66C9D9; }
+  border-color: lightblue;
+  color: lightblue; }
 
 .alert {
   color: red;

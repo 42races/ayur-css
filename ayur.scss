@@ -1,10 +1,19 @@
 $theme-bg-color:#eee;
 $theme-color:gray;
+$link-visited:#c0c0c0;
+$link-hover:#c0c0c0;
+$success-color: green;
+$success-font-color: green;
+$success-bg-color:lightgreen;
+$error-color: red;
+$error-font-color: red;
+$error-bg-color:#F5B3B3;
+$info-color: lightblue;
+$info-font-color: blue;
+$info-bg-color:#66C9D9;
 $normal-padding:7px;
 $border-width:1px;
 $border-radius:2px;
-$link-visited:#c0c0c0;
-$link-hover:#c0c0c0;
 
 body {
     background-color: $theme-bg-color;
@@ -19,7 +28,7 @@ body {
 }
 
 input {
-    outline:none;
+    outline:none !important;
 }
 
 a {
@@ -85,18 +94,18 @@ a:visited { color:$link-visited; }
 }
 
 .error {
-    border-color:red;
-    color: red;
+    border-color:$error-color;
+    color: $error-color;
 }
 
 .success {
-    border-color:green;
-    color: green;
+    border-color:$success-color;
+    color: $success-color;
 }
 
 .info {
-    border-color:#66C9D9;
-    color: #66C9D9;
+    border-color:$info-color;
+    color:$info-color;
 }
 
 @mixin message($color, $bg-color){
@@ -115,11 +124,11 @@ a:visited { color:$link-visited; }
 }
 
 .alert {
-    @include message(red, #F5B3B3);
+    @include message($error-font-color, $error-bg-color);
 }
 
 .notice {
-    @include message(blue, #66C9D9)
+    @include message($info-font-color, $info-bg-color)
 }
 
 .sticky-footer {
